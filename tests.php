@@ -133,7 +133,7 @@ if (!$link) {
     $passPercent = $passTestCount/$allTestCount*100;
     echo "Unit test result: pass $passTestCount/$allTestCount test ($passPercent%)\n";
     echo "$passPercent\n";
-    echo "FAIL: ".implode('; ', $failArr);
+    echo "FAIL: " . implode('; ', $failArr) . "\n";
 
     // After: delete testing data
     mysqli_query($link, "DELETE FROM store WHERE id='$testId1' OR id='$testId2';");
