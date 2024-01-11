@@ -141,14 +141,3 @@ if (!$link) {
 ?>
     </body>
 </html>
-
-docker stop mywebapp-container
-docker rm mywebapp-container
-docker rmi ttrung/app_test:test
-docker build -t ttrung/app_test:test .
-docker push ttrung/app_test:test
-
-docker run -d --name mywebapp-container -p 8081:80 ttrung/app_test:test
-
-docker logs c6a3b694b61d | grep "GET"
-docker exec -it c6a3b694b61d /bin/bash
