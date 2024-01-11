@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php
 require_once 'functions.php';
 
@@ -128,3 +131,6 @@ if (!$link) {
     // After: delete testing data
     mysqli_query($link, "DELETE FROM store WHERE id='$testId1' OR id='$testId2';");
 }
+?>
+
+</html>
