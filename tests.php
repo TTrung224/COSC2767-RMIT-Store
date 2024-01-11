@@ -32,7 +32,7 @@ $link = mysqli_connect(
     "192.168.1.10",
     "db_admin",
     "rmit_password",
-    "rmit_store_db",
+    "rmit_store_db"
     // $_ENV["DBPort"]
 );
 
