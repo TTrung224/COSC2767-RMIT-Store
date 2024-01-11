@@ -29,7 +29,7 @@ echo "UNIT TESTING\n";
 
 $link = mysqli_connect(
     // $_ENV["DBHost"],
-    "192.168.1.10",
+    "54.226.131.102",
     "db_admin",
     "rmit_password",
     "rmit_store_db"
