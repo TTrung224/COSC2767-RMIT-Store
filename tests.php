@@ -18,12 +18,11 @@ function fail($testCase, &$failArr){
 echo "UNIT TESTING\n";
 
 $link = mysqli_connect(
-    // $_ENV["DBHost"],
-    "54.226.131.102",
+    $_ENV["DBHost"],
     "db_admin",
     "rmit_password",
-    "rmit_store_db"
-    // $_ENV["DBPort"]
+    "rmit_store_db",
+    $_ENV["DBPort"]
 );
 
 
