@@ -90,11 +90,11 @@
             <div class="row rmit-product-section">
               <?php
               $link = mysqli_connect(
-                $_ENV["DBHost"],
+                $_SERVER["DBHost"],
                 "db_admin",
                 "rmit_password",
                 "rmit_store_db",
-                $_ENV["DBPort"]
+                $_SERVER["DBPort"]
               );
               if ($link) {
                   $res = mysqli_query($link, "select * from store;");
