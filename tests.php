@@ -27,6 +27,7 @@ $link = mysqli_connect(
 
 
 if (!$link) {
+    array_push($failArr, "Database connection error");
     echo "ERROR: " . mysqli_connect_errno() . ": " . mysqli_connect_error() . "\n";
 }else {
     $testId1 = 8388606;
@@ -116,15 +117,15 @@ if (!$link) {
     }else {
         fail($testCase, $failArr);
     }
-
-    // Result
-    echo "\n";
-    $passPercent = $passTestCount/$allTestCount*100;
-    echo "Unit test result: pass $passTestCount/$allTestCount test ($passPercent%)\n";
-    echo "$passPercent\n";
-    echo "FAIL: " . implode('; ', $failArr) . "\n";
-
     // After: delete testing data
     mysqli_query($link, "DELETE FROM store WHERE id='$testId1' OR id='$testId2';");
 }
+
+// Result
+echo "\n";
+$passPercent = $passTestCount/$allTestCount*100;
+echo "Unit test result: pass $passTestCount/$allTestCount test ($passPercent%)\n";
+echo "$passPercent\n";
+echo "FAIL: " . implode('; ', $failArr) . "\n";
+
 ?>
